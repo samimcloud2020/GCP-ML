@@ -28,7 +28,7 @@ llm = VertexAI(
     
 embeddings = VertexAIEmbeddings()
 
-
+#The below code scrapes all the text data from the webpage link provided by the user and saves it in a text file.
 def get_text(url):
     # Send a GET request to the URL
     response = requests.get(url)
