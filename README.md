@@ -8,7 +8,9 @@ This application uses:
 - StreamLit Framework for Application Development
 - 
 *******************************************deploy on streamlit community cloud*********************************
+  
 https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app
+
 *********************************Tempature, Top-P, Top-K*********************************************************
 
 Nucleus sampling is a technique used in large language models to control the randomness and diversity of generated text. 
