@@ -43,3 +43,9 @@ You have to balance diversity and relevance when tuning these parameters for dif
 
 !pip install streamlit
 *********************************************************************************************************************
+For this implementation, I have installed Google Cloud CLI and authenticated using
+
+#run in command line
+gcloud auth application-default login
+#####################################################################################################################
+
