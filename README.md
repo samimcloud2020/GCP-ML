@@ -6,7 +6,8 @@ This application uses:
 - Google's Vertex AI PaLM API for text embedding and text answering
 - Langchain framework for creating the embedding index and document retrieval
 - StreamLit Framework for Application Development
-
+*******************************************deploy on streamlit community cloud*********************************
+https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app
 ******************************************************************************************************************
 Nucleus sampling is a technique used in large language models to control the randomness and diversity of generated text. 
 It works by sampling from only the most likely tokens in the model’s predicted distribution.
