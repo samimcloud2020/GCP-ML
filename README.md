@@ -30,3 +30,11 @@ Lower top-k also concentrates sampling on the highest probability tokens for eac
 
 So temperature increases variety, while top-p and top-k reduce variety and focus samples on the model’s top predictions.
 You have to balance diversity and relevance when tuning these parameters for different applications.
+**********************************************************************************************************************
+!pip install google-cloud-aiplatform --upgrade --user
+!pip install langchain --upgrade
+!pip install bs4
+!pip install docarray
+!pip install tiktoken
+!pip install streamlit
+*********************************************************************************************************************
