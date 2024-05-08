@@ -47,5 +47,5 @@ For this implementation, I have installed Google Cloud CLI and authenticated usi
 
 #run in command line
 gcloud auth application-default login
-#####################################################################################################################
+********************************************************************************************************************
 
