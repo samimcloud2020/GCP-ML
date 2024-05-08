@@ -81,3 +81,5 @@ the function altogether and return the cached value instead. The data is stored 
 @st.cache_resource caches unserializable objects that you don’t want to load multiple times. 
 Using it, you can share these resources across all reruns and sessions of an app without copying or duplication.
 **********************************************************************************************************************
+streamlit run QnA_App_PaLM.py
+**********************************************************************************************************************
