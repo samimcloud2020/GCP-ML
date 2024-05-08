@@ -7,10 +7,26 @@ This application uses:
 - Langchain framework for creating the embedding index and document retrieval
 - StreamLit Framework for Application Development
 
-  
-# Blog
-https://medium.com/@vaibhavsahu/question-a-web-page-using-vertex-ai-palm-api-langchain-and-streamlit-8b56f0753cec
+******************************************************************************************************************
+Nucleus sampling is a technique used in large language models to control the randomness and diversity of generated text. 
+It works by sampling from only the most likely tokens in the model’s predicted distribution.
 
+The key parameters are:
 
-# Demo
-https://www.youtube.com/watch?v=D68Cwp1PqQg
+Temperature: Controls randomness, higher values increase diversity.
+
+Top-p (nucleus): The cumulative probability cutoff for token selection. Lower values mean sampling from a smaller,
+                more top-weighted nucleus.
+
+Top-k: Sample from the k most likely next tokens at each step. Lower k focuses on higher probability tokens.
+*********************************************************************************************************************
+In general:
+
+Higher temperature will make outputs more random and diverse.
+
+Lower top-p values reduce diversity and focus on more probable tokens.
+
+Lower top-k also concentrates sampling on the highest probability tokens for each step.
+
+So temperature increases variety, while top-p and top-k reduce variety and focus samples on the model’s top predictions.
+You have to balance diversity and relevance when tuning these parameters for different applications.
