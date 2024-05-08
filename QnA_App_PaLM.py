@@ -72,6 +72,9 @@ def get_response(input_text,query):
     response = index.query(query,llm=llm)
     return response
 
+#The below code is a simple flow to accept the webpage link and process the queries
+#using the get_response function created above. Using the cache, the same.
+
 st.title('Webpage Question and Answering')
 
 
