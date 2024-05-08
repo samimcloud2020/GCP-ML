@@ -48,4 +48,36 @@ For this implementation, I have installed Google Cloud CLI and authenticated usi
 #run in command line
 gcloud auth application-default login
 ********************************************************************************************************************
+Note: I am not using Langchain’s WebBaseLoader as it leads to wrong response using texts from ads and other texts 
+from the webpage while in the above code, only the text from paragraphs are extracted.
+*******************************************************************************************************************
+LangChain Question & Answering
 
+LangChain supports Question answering over documents — text files, CSV and pdf, etc. This Question & Answering 
+refers to the Questions asked in the context of the document provided (not from public sources). 
+Here are the steps involved in LangChain to perform this
+
+1.Creates a Loader from the documents provided. It created multiple chunks of text data coming from the documents.
+
+2.These text chunks are sent to the LLM model (in this case PaLM API text Embeddings model). 
+Embeddings are nothing but a vector of numbers converted by the machine learning model, from the text data provided.
+
+3.LangChain stores these embeddings in an in-memory database along with the chunks.
+This whole process is called indexing and the VectorstoreIndexCreator method for indexing is used in the below code.
+
+4.Once a question is asked by a user, embedding is created from the question text. 
+Now the question embedding is searched over the database to find similar document embeddings.
+Cosine-similarity is a known similarity search algorithm generally used.
+
+5.Once the most appropriate documents are found, they are again sent to the LLM model with the question asked,
+as a prompt, to synthesize the response.
+
+I am using Streamlit Caching here to store objects across user interactions and multiple sessions. 
+Streamlit provides two decorators @st.cache_resource and @st.cache_data.
+
+Using @st.cache_data checks if the function is called with the same parameters and code, Streamlit will skip executing
+the function altogether and return the cached value instead. The data is stored in a serialized manner in this case.
+
+@st.cache_resource caches unserializable objects that you don’t want to load multiple times. 
+Using it, you can share these resources across all reruns and sessions of an app without copying or duplication.
+**********************************************************************************************************************
