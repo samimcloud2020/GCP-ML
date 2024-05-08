@@ -1,15 +1,22 @@
+#DocArrayInMemorySearch is a document index provided by Docarray that stores documents in memory. 
+#It is a great starting point for small datasets, where you may not want to launch a database server.
+
 # import libraries
 import streamlit as st
 import requests
 from bs4 import BeautifulSoup
-from langchain.document_loaders import TextLoader
-from langchain.indexes import VectorstoreIndexCreator
-from langchain.vectorstores import DocArrayInMemorySearch
+from langchain.document_loaders import TextLoader          #reads in a file as text and places it all into one document.
+from langchain.indexes import VectorstoreIndexCreator      #Logic for creating indexes.
+from langchain.vectorstores import DocArrayInMemorySearch  #document index provided by Docarray that stores documents in memory.
 import vertexai
 from langchain.llms import VertexAI
 from langchain.embeddings import VertexAIEmbeddings
 
-vertexai.init(project=PROJECT, location=LOCATION)
+vertexai.init(project=PROJECT, location=LOCATION)        #GCP PROJECT ID, LOCATION as region.
+
+#The PaLM 2 for Text (text-bison, text-unicorn) foundation models are optimized for a variety of natural language 
+#tasks such as sentiment analysis, entity extraction, and content creation. The types of content that the PaLM 2 for
+#Text models can create include document summaries, answers to questions, and labels that classify content.
 
 llm = VertexAI(
     model_name="text-bison@001",
